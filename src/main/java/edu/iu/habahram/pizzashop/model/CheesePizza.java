@@ -12,5 +12,9 @@ public class CheesePizza extends Pizza {
 		dough = ingredientFactory.createDough();
 		sauce = ingredientFactory.createSauce();
 		cheese = ingredientFactory.createCheese();
+		if (ingredientFactory instanceof NewYorkPizzaIngredientFactory) {
+			garlic = ((NewYorkPizzaIngredientFactory) ingredientFactory).createGarlic();
+		}
+
 	}
 }
